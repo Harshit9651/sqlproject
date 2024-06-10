@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Registration</title>
+   <style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.register {
+    padding: 50px 0;
+}
+
+.register h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.register form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.register label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.register input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register .btn {
+    width: 100%;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Company Registration</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="register" class="register">
+        <div class="container">
+            <h2>Register Your Company</h2>
+            <form action="/companyInpu_data" method="post">
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                <!-- Add more fields as needed -->
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Company and Employee Management. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

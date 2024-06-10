@@ -1,14 +1,5 @@
-const Employee = require('../models/employee');
+const Employee = require('../model/employe.js');
 
-const createEmployee = async (req, res) => {
-    try {
-        const { firstName, lastName, position, companyId } = req.body;
-        const newEmployee = await Employee.create({ firstName, lastName, position, companyId });
-        res.status(201).json(newEmployee);
-    } catch (error) {
-        res.status(500).json({ error: 'An error occurred while creating the employee' });
-    }
-};
 
 const getAllEmployees = async (req, res) => {
     try {
@@ -19,4 +10,23 @@ const getAllEmployees = async (req, res) => {
     }
 };
 
-module.exports = { createEmployee, getAllEmployees };
+const employeecreatepage = async (req,res)=>{
+    try{
+        await res.render('listings/employeeinput')
+    }
+    catch(error){
+        res.status(500).json({error:"accured some error "})
+    }
+}
+const addnewemployee = async(req,res)=>{
+    try{
+        const{firstName,lastName,position,email,password} = req.body;
+        console.log(firstName,lastName,position,email,password);
+        const newemployee = await Employee.create({firstName,lastName,email,position,password});
+        res.status(201).json('data saved succesfully ')
+        console.lo(newemployee)
+    }catch(error){
+        res.status(500).json({error:"accured some error"})
+    }
+}
+module.exports = {  getAllEmployees ,employeecreatepage,addnewemployee};
