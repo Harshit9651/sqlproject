@@ -18,15 +18,19 @@ const employeecreatepage = async (req,res)=>{
         res.status(500).json({error:"accured some error "})
     }
 }
-const addnewemployee = async(req,res)=>{
-    try{
-        const{firstName,lastName,position,email,password} = req.body;
-        console.log(firstName,lastName,position,email,password);
-        const newemployee = await Employee.create({firstName,lastName,email,position,password});
-        res.status(201).json('data saved succesfully ')
-        console.lo(newemployee)
-    }catch(error){
-        res.status(500).json({error:"accured some error"})
+const addnewemployee = async (req, res) => {
+    try {
+        const { firstName, lastName, position, email, password } = req.body;
+        console.log(firstName, lastName, position, email, password);
+
+        const newEmployee = await Employee.create({ firstName, lastName, email, position, password });
+        
+        // Send the response
+        res.status(201).json({ message: 'Data saved successfully', employee: newEmployee });
+        
+        console.log(newEmployee); 
+    } catch (error) {
+        res.status(500).json({ error: "An error occurred while adding a new employee" });
     }
-}
+};
 module.exports = {  getAllEmployees ,employeecreatepage,addnewemployee};
