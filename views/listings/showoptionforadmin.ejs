@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .box {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 300px;
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px; /* Fixed height for equal size */
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        @media (min-width: 600px) {
+            .container {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2><a href="/employees-inputpage">Add Employee</a></h2>
+        </div>
+        <div class="box">
+            <h2><a href="/showallemploye">Show Employee</a></h2>
+        </div>
+    </div>
+</body>
+</html>

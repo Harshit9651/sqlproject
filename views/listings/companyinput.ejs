@@ -4,87 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Registration</title>
-   <style>body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-}
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
 
-header h1 {
-    text-align: center;
-}
+        header h1 {
+            text-align: center;
+        }
 
-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
 
-.register {
-    padding: 50px 0;
-}
+        .register {
+            flex: 1;
+            padding: 50px 0;
+        }
 
-.register h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
+        .register h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-.register form {
-    width: 50%;
-    margin: 0 auto;
-}
+        .register form {
+            width: 50%;
+            margin: 0 auto;
+        }
 
-.register label {
-    display: block;
-    margin-bottom: 5px;
-}
+        .register label {
+            display: block;
+            margin-bottom: 5px;
+        }
 
-.register input {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+        .register input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-.register .btn {
-    width: 100%;
-    text-align: center;
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
+        .register .btn {
+            width: 100%;
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-</style>
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -108,6 +115,9 @@ footer {
                 <input type="text" id="companyName" name="companyName" required>
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
+                <label for="password">Enter Username</label>
+                <input type="text"  name="username"  required placeholder="like xyz@">
+            
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" required>
                 <!-- Add more fields as needed -->

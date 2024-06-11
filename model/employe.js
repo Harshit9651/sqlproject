@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes, UUIDV4 } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../DB/connect'); 
 const Company = require('./company'); 
@@ -15,7 +15,6 @@ const Employee = sequelize.define('Employee', {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
         validate: {
             isEmail: true,
         },
@@ -33,6 +32,7 @@ const Employee = sequelize.define('Employee', {
     },
     companyId: {
         type: DataTypes.INTEGER,
+        allowNull: false,
         references: {
             model: Company,
             key: 'id',
@@ -43,14 +43,13 @@ const Employee = sequelize.define('Employee', {
     timestamps: true,
     hooks: {
         beforeCreate: async (employee) => {
-            // Hash the password before saving
             const hashedPassword = await bcrypt.hash(employee.password, 10);
             employee.password = hashedPassword;
         },
     },
 });
 
-// Define associations
+// Define associations ***** many to many 
 Company.hasMany(Employee, { foreignKey: 'companyId' });
 Employee.belongsTo(Company, { foreignKey: 'companyId' });
 

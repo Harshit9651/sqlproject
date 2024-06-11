@@ -3,9 +3,19 @@ const sequelize = require('../DB/connect.js');
 const bcrypt = require('bcrypt');
 
 const company = sequelize.define('company', {
+    
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
     name: {
         type: DataTypes.STRING,
         allowNull: false,
+    },
+    username:{
+        type:DataTypes.STRING,
+        allowNull:false,
     },
     location: {
         type: DataTypes.STRING,
