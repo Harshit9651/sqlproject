@@ -81,10 +81,7 @@ const loginform = async (req, res) => {
 
 const deleteEmployeData = async (req, res) => {
     try {
-     
         const companyId = req.body.companyId;
-
-        // Find the employee with the provided ID and companyId
         const employee = await Employee.findOne({ where: { companyId: companyId } });
 
         if (!employee) {

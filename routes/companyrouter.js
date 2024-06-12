@@ -12,7 +12,6 @@ router.post('/companyInpu_data',inpudata)
 router.get('/',Landingpage)
 router.get('/show',isAdmin,isAuthenticated,optionforadmin)
 router.post("/login",loginform)
-//router.get('/employees/update/:id',updatedEmployedata);
 router.post('/employees/delete/:id',deleteEmployeData)
 
 module.exports = router;
