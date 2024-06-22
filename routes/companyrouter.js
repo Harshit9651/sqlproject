@@ -1,4 +1,4 @@
-const {createCompany, getAllCompanies,getcompanyform,inpudata,Landingpage,optionforadmin,loginform,deleteEmployeData} = require('../controller/companycontroller.js')
+const {createCompany, getAllCompanies,getcompanyform,inpudata,Landingpage,optionforadmin,loginform,deleteEmployeData,showdetails} = require('../controller/companycontroller.js')
 const express = require('express');
 const {isAuthenticated,isAdmin} = require('../middleware/auth.js')
 const router = express.Router();
@@ -13,5 +13,7 @@ router.get('/',Landingpage)
 router.get('/show',isAdmin,isAuthenticated,optionforadmin)
 router.post("/login",loginform)
 router.post('/employees/delete/:id',deleteEmployeData)
+router.get('/getdata',showdetails);
+
 
 module.exports = router;

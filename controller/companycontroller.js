@@ -1,4 +1,6 @@
 const { compareSync } = require('bcrypt');
+const fs = require('fs')
+const  ExcelJS = require('exceljs')
 const bcrypt = require('bcrypt');
 
 const Company = require('../model/company.js');
@@ -97,6 +99,54 @@ const deleteEmployeData = async (req, res) => {
     }
 };
 
+
+
+const showdetails = async (req, res) => {
+    try {
+        // Read data from data.json file
+        const rawData = fs.readFileSync('data.json');
+        const books = JSON.parse(rawData);
+
+        // Create a new Excel workbook
+        const workbook = new ExcelJS.Workbook();
+        const worksheet = workbook.addWorksheet('Books');
+
+        // Define columns in the worksheet
+        worksheet.columns = [
+            { header: 'ID', key: 'id', width: 10 },
+            { header: 'Title', key: 'name', width: 30 },
+            { header: 'Author', key: 'author', width: 30 },
+            { header: 'Description', key: 'description', width: 50 },
+            // Add more columns as needed
+        ];
+
+        // Populate data into the worksheet
+        books.forEach((book, index) => {
+            worksheet.addRow({
+                id: index + 1, // Example: use index + 1 as ID
+                name: book.name,
+                author: book.author,
+                description: book.description,
+                // Add more properties from your JSON data
+            });
+        });
+
+        // Generate Excel file in memory
+        const buffer = await workbook.xlsx.writeBuffer();
+
+        // Set headers for the response
+        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        res.setHeader('Content-Disposition', 'attachment; filename="books.xlsx"');
+
+        // Send the buffer as the response
+        res.send(buffer);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+};
+
+
 module.exports = { createCompany,
      getAllCompanies,
     getcompanyform,
@@ -104,7 +154,7 @@ module.exports = { createCompany,
     Landingpage,
     optionforadmin,
     loginform,
-    deleteEmployeData
+    deleteEmployeData,showdetails
   
    
  };

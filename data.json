@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "name": "The Shadow of the Wind",
+        "author": "Carlos Ruiz Zafón",
+        "description": "A captivating mystery set in post-war Barcelona, blending elements of gothic fiction and detective novel.",
+        "genre": "Mystery",
+        "pages": 487,
+        "publishedYear": 2001,
+        "language": "English",
+        "publisher": "Penguin Books"
+    },
+    {
+        "id": 2,
+        "name": "1984",
+        "author": "George Orwell",
+        "description": "A dystopian novel set in a totalitarian society, exploring themes of government surveillance and control.",
+        "genre": "Science Fiction",
+        "pages": 328,
+        "publishedYear": 1949,
+        "language": "English",
+        "publisher": "Secker & Warburg"
+    },
+    {
+        "id": 3,
+        "name": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "description": "A novel depicting racial injustice and moral growth in the Deep South during the 1930s.",
+        "genre": "Fiction",
+        "pages": 324,
+        "publishedYear": 1960,
+        "language": "English",
+        "publisher": "J. B. Lippincott & Co."
+    },
+    {
+        "id": 4,
+        "name": "The Hitchhiker's Guide to the Galaxy",
+        "author": "Douglas Adams",
+        "description": "A humorous science fiction series following the adventures of Arthur Dent after the destruction of Earth.",
+        "genre": "Science Fiction",
+        "pages": 224,
+        "publishedYear": 1979,
+        "language": "English",
+        "publisher": "Pan Books"
+    },
+    {
+        "id": 5,
+        "name": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "description": "A classic romance novel exploring societal expectations, love, and marriage in early 19th century England.",
+        "genre": "Romance",
+        "pages": 432,
+        "publishedYear": 1813,
+        "language": "English",
+        "publisher": "T. Egerton, Whitehall"
+    },
+    {
+        "id": 6,
+        "name": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "description": "A novel depicting the American Dream, wealth, and social class in the Jazz Age of the 1920s.",
+        "genre": "Fiction",
+        "pages": 180,
+        "publishedYear": 1925,
+        "language": "English",
+        "publisher": "Charles Scribner's Sons"
+    },
+    {
+        "id": 7,
+        "name": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "description": "The first book in the Harry Potter series, following a young wizard's adventures at Hogwarts School of Witchcraft and Wizardry.",
+        "genre": "Fantasy",
+        "pages": 320,
+        "publishedYear": 1997,
+        "language": "English",
+        "publisher": "Bloomsbury"
+    },
+    {
+        "id": 8,
+        "name": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "description": "A psychological thriller novel exploring morality, guilt, and redemption in 19th century Russia.",
+        "genre": "Psychological Fiction",
+        "pages": 551,
+        "publishedYear": 1866,
+        "language": "Russian",
+        "publisher": "The Russian Messenger"
+    },
+    {
+        "id": 9,
+        "name": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "description": "A novel depicting teenage angst and alienation, following the protagonist Holden Caulfield in New York City.",
+        "genre": "Fiction",
+        "pages": 277,
+        "publishedYear": 1951,
+        "language": "English",
+        "publisher": "Little, Brown and Company"
+    },
+    {
+        "id": 10,
+        "name": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "description": "An epic fantasy series set in the fictional world of Middle-earth, chronicling the quest to destroy the One Ring.",
+        "genre": "Fantasy",
+        "pages": 1178,
+        "publishedYear": 1954,
+        "language": "English",
+        "publisher": "George Allen & Unwin"
+    }
+]

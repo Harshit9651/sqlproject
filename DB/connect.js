@@ -1,9 +1,9 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('OFFICEDATA', 'root', 'harshit9660@', {
+const sequelize = new Sequelize('testdata', 'root', '', {
     host: 'localhost',
     dialect: 'mysql',
-    logging: false, 
+    logging: false, // Disable logging SQL queries to the console
 });
 
 (async () => {
